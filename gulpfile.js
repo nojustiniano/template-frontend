@@ -10,19 +10,14 @@ var plugins = require('gulp-load-plugins')();
 
 gulp.task('default', ['init','watch']);
 
-//Tareas que beben realizarce al iniciar
-gulp.task('init', ['less','uglify','sync'])
+//Tareas que deben realizarce al iniciar
+gulp.task('init', ['minimize','less','uglify','sync'])
 
 //Sincronizar src con disc
 gulp.task('sync', function() {
 	//copiar las librerias
-	gulp.src('src/lib/**/*')
-    	.pipe(gulp.dest('dist/lib'));
-	//copiar los html
-	gulp.src('src/**/*.html')
-		.pipe(htmlmin({collapseWhitespace: true}))
-    	.pipe(gulp.dest('dist'))
-		.pipe(livereload());
+	gulp.src(['src/**/*','!src/**/*.html','!src/js/*','!src/css/*'])
+    	.pipe(gulp.dest('dist'));
 	//Eliminar los archivos borrados
     syncronize({
         src: 'src', //Source folder
@@ -31,6 +26,14 @@ gulp.task('sync', function() {
         exclude: []
     });
 });
+
+//copiar y minimizar los html
+gulp.task('minimize', function(){
+	gulp.src('src/**/*.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
+    	.pipe(gulp.dest('dist'))
+		.pipe(livereload());
+})
 
 //ofuscar archivos js
 gulp.task('uglify', function () {
