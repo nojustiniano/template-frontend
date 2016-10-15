@@ -1,0 +1,1 @@
+"use strict";angular.module("myApp.header",[]).controller("headerCtrl",["$location",function(t){var r=this;r.isActive=function(r){return r===t.path()}}]);

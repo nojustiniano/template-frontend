@@ -6,3 +6,7 @@ tmp
 .DS_Store
 .idea
 .vscode
+*.png
+*.xml
+*.txt
+*.ico
