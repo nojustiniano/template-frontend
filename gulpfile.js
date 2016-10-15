@@ -57,6 +57,7 @@ gulp.task('less', function () {
 //Vigilar cambios
 gulp.task('watch', function () {
 	livereload.listen();
+	gulp.watch('src/**/*.html', ['minimize']);
     gulp.watch('src/js/*.js', ['uglify']);
     gulp.watch('src/css/*.less', ['less']);
 	gulp.watch('src/**/*', ['sync']);
