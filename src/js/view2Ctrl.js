@@ -16,7 +16,10 @@ angular.module('myApp.view2', ['ngRoute'])
   ctrl.label = "";
 
   ctrl.add = function(){
-    ctrl.labels.push(ctrl.label);
+    if(ctrl.labels.indexOf(ctrl.label) === -1)
+      ctrl.labels.push(ctrl.label);
+    else
+      bootbox.alert("Elemento ya existente");
   }
 
   ctrl.remove = function(index){

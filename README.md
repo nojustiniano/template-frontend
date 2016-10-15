@@ -1,12 +1,13 @@
 # template-frontend
 <p>Base para proyecto FrontEnd usando:</p>
   <ul>
-    <li>angularjs</li>
-    <li>bootstrap</li>
-    <li>less</li>
-    <li>html5-boilerplate</li>
-    <li>bower</li>
-    <li>gulp</li>
+    <li>Angularjs</li>
+    <li>Bootstrap</li>
+    <li>Bootbox.js</li>
+    <li>Less</li>
+    <li>Html5-boilerplate</li>
+    <li>Bower</li>
+    <li>Gulp</li>
   </ul>
   
 <p>
