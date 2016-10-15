@@ -10,5 +10,16 @@ angular.module('myApp.view2', ['ngRoute'])
 }])
 
 .controller('View2Ctrl', [function() {
+  var ctrl = this;
 
+  ctrl.labels = [];
+  ctrl.label = "";
+
+  ctrl.add = function(){
+    ctrl.labels.push(ctrl.label);
+  }
+
+  ctrl.remove = function(index){
+    ctrl.labels.splice(index,1);
+  }
 }]);

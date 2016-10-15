@@ -11,5 +11,5 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', [function() {
 	var ctrl = this;
-	ctrl.nombre = "su nombre";
+	ctrl.nombre = "";
 }]);
