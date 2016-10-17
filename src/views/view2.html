@@ -12,7 +12,8 @@
 
 <br>
 
-<div class="alert alert-info" role="alert" ng-repeat="tag in ctrl.labels track by $index">
+<div class="alert alert-info rp-elm" role="alert" ng-repeat="tag in ctrl.labels | orderBy track by $index" 
+      ng-swipe-left="ctrl.remove($index)" ng-swipe-right="ctrl.remove($index)" >
   {{tag}}
   <button type="button" class="close" aria-label="Close" ng-click="ctrl.remove($index)">
     <span aria-hidden="true">&times;</span>

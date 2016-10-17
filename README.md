@@ -2,6 +2,8 @@
 <p>Base para proyecto FrontEnd usando:</p>
   <ul>
     <li>Angularjs</li>
+    <li>Angular-touch</li>
+    <li>Angular-animate</li>
     <li>Bootstrap</li>
     <li>Bootbox.js</li>
     <li>Less</li>

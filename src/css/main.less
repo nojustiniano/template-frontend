@@ -26,3 +26,16 @@ body {
     background-color: #111;
     color: @inverse-color;
 }
+
+//ng-repeat animation
+.rp-elm {
+    transition: 0.3s linear all;
+    -webkit-transition: 0.3s linear all;
+
+    &.ng-enter,&.ng-move,&.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+    &.ng-leave,&.ng-enter.ng-enter-active,&.ng-move.ng-move-active {
+        opacity: 1;
+    }
+}
